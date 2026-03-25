@@ -1,0 +1,16 @@
+{
+  "name": "distro-system",
+  "version": "1.0.0",
+  "description": "Tailwind CSS build toolchain for distro-system",
+  "main": "index.js",
+  "scripts": {
+    "build": "postcss src/css/app.css -o public/css/app.css",
+    "dev": "postcss src/css/app.css -o public/css/app.css --watch"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "postcss-cli": "^11.0.0",
+    "tailwindcss": "^3.4.1"
+  }
+}

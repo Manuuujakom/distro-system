@@ -1,0 +1,31 @@
+:root {
+  --color-bg: #FFFFFF;
+  --color-surface: #F8FAFC;
+  --color-sidebar: #1E293B;
+  --color-text: #1E293B;
+  --color-text-muted: #64748B;
+  --color-border: #E2E8F0;
+  --color-primary: #1E40AF;
+  --color-accent: #F59E0B;
+  --color-danger: #EF4444;
+  --color-success: #10B981;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.dark {
+  --color-bg: #020617;
+  --color-surface: #0F172A;
+  --color-sidebar: #0F172A;
+  --color-text: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --color-border: #1E293B;
+  --color-primary: #3B82F6; /* Slightly brighter for dark mode visibility */
+  --color-accent: #F59E0B;
+}
+
+/* Global Transition for theme switching */
+* {
+  transition: color 200ms ease, background-color 200ms ease, border-color 200ms ease;
+}

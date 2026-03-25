@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./theme.css";
+
+/* Mirroring the Tailwind palette for vanilla JS access */
+:root {
+  --js-primary: #1E40AF;
+  --js-accent: #F59E0B;
+  --js-surface-light: #F8FAFC;
+  --js-surface-dark: #0F172A;
+  --js-sidebar-light: #1E293B;
+  --js-sidebar-dark: #0F172A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar Styling */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-accent) transparent;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-accent);
+  border-radius: 20px;
+}
