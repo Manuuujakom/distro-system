@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Main Tailwind Output -->
-    <link rel="stylesheet" href="/public/css/app.css">
+    <link rel="stylesheet" href="../../public/css/app.css">
 
     <!-- Prevent Flash of Unstyled Theme (FOUT) -->
     <script>
@@ -25,7 +25,7 @@
         })();
     </script>
 </head>
-<body style="display: flex; flex-direction: row; height: 100vh; overflow: hidden; background-color: var(--color-bg); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 14px;">
+<body style="display: flex; flex-direction: row; height: 100vh; overflow: hidden; overflow-x: hidden; background-color: var(--color-bg); color: var(--color-text); font-family: 'Inter', sans-serif; font-size: 14px;">
 
     <!-- SIDEBAR -->
 
@@ -41,6 +41,6 @@
 
     </div>
 
-    <script src="/public/js/app.js" defer></script>
+    <script src="../../public/js/app.js" defer></script>
 </body>
 </html>

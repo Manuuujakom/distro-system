@@ -12,7 +12,7 @@
         const themeBtn = document.getElementById('theme-toggle');
         const htmlRoot = document.getElementById('html-root');
         const overlay = document.getElementById('sidebar-overlay');
-        const topbar = document.getElementById('topbar');
+        const wrapper = document.getElementById('main-content-wrapper');
         const userMenuBtn = document.getElementById('user-menu-btn');
         const userDropdown = document.getElementById('user-dropdown');
 
@@ -20,7 +20,7 @@
 
         // --- Sidebar Visibility & Collapse Logic ---
         const toggleSidebar = () => {
-            const isMobile = window.innerWidth < 768;
+            const isMobile = window.innerWidth < 1024;
 
             if (isMobile) {
                 sidebar.classList.toggle('-translate-x-full');
@@ -32,13 +32,13 @@
                 // Manage explicit widths to ensure Tailwind transitions trigger correctly
                 if (isCollapsed) {
                     sidebar.classList.replace('w-64', 'w-16');
-                    if (topbar) {
-                        topbar.classList.replace('md:ml-64', 'md:ml-16');
+                    if (wrapper) {
+                        wrapper.classList.replace('lg:ml-64', 'lg:ml-16');
                     }
                 } else {
                     sidebar.classList.replace('w-16', 'w-64');
-                    if (topbar) {
-                        topbar.classList.replace('md:ml-16', 'md:ml-64');
+                    if (wrapper) {
+                        wrapper.classList.replace('lg:ml-16', 'lg:ml-64');
                     }
                 }
             }

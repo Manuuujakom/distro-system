@@ -1,13 +1,31 @@
-<!-- 
-  Note: This file is intended to be rendered within the main.php layout. 
-  It includes placeholders for sidebar and topbar partials as requested.
--->
+<!DOCTYPE html>
+<html lang="en" id="html-root" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management - DistroManager</title>
+
+    <!-- Main Tailwind Output -->
+    <link rel="stylesheet" href="../../public/css/app.css">
+
+    <!-- Prevent Flash of Unstyled Theme -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.getElementById('html-root').classList.add('dark');
+                document.getElementById('html-root').classList.remove('light');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <!-- SIDEBAR PARTIAL -->
 <!-- include "../components/sidebar.php" -->
 
 <!-- MAIN CONTENT WRAPPER -->
-<div class="flex flex-col flex-1 min-width-0 overflow-hidden">
+<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
     
     <!-- TOPBAR PARTIAL -->
     <!-- include "../components/topbar.php" -->
@@ -88,7 +106,7 @@
         </div>
 
         <!-- SALES TABLE -->
-        <div class="bg-[var(--color-surface)] rounded-xl border border-[var(--color-border)] shadow-sm overflow-hidden">
+        <div class="bg-[var(--color-surface)] dark:bg-slate-800 rounded-xl border border-[var(--color-border)] dark:border-slate-700 shadow-sm overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead class="bg-slate-50 dark:bg-slate-900/50 text-[10px] font-bold uppercase tracking-wider text-slate-500 border-b border-[var(--color-border)]">
@@ -214,15 +232,15 @@
             </div>
             <div class="space-y-1.5">
                 <label class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Customer Name</label>
-                <input type="text" placeholder="e.g. Jane Doe" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-sm outline-none focus:ring-4 focus:ring-primary/10 transition-all">
+                <input type="text" placeholder="e.g. Jane Doe" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-base outline-none focus:ring-4 focus:ring-primary/10 transition-all">
             </div>
             <div class="space-y-1.5">
                 <label class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Phone Number</label>
-                <input type="tel" placeholder="07XX XXX XXX" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-sm outline-none focus:ring-4 focus:ring-primary/10 transition-all">
+                <input type="tel" placeholder="07XX XXX XXX" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-base outline-none focus:ring-4 focus:ring-primary/10 transition-all">
             </div>
             <div class="col-span-2 space-y-1.5">
                 <label class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Sale Date</label>
-                <input type="date" value="2026-03-25" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-sm outline-none focus:ring-4 focus:ring-primary/10 transition-all">
+                <input type="date" value="2026-03-25" class="w-full bg-slate-50 dark:bg-slate-900 border border-[var(--color-border)] rounded-xl py-2.5 px-4 text-base outline-none focus:ring-4 focus:ring-primary/10 transition-all">
             </div>
         </div>
 
@@ -238,7 +256,7 @@
                 <div class="product-row grid grid-cols-12 gap-3 items-end p-4 bg-slate-50 dark:bg-slate-900/50 rounded-xl border border-slate-100 dark:border-slate-800 relative group">
                     <div class="col-span-7 space-y-1">
                         <label class="text-[10px] font-bold uppercase text-slate-400">Product</label>
-                        <select class="product-select w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg py-1.5 px-3 text-xs outline-none focus:ring-2 focus:ring-primary/20">
+                        <select class="product-select w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg py-1.5 px-3 text-base outline-none focus:ring-2 focus:ring-primary/20">
                             <option value="" data-price="0">Select Product</option>
                             <option value="Cooking Oil 5L" data-price="300">Cooking Oil 5L (KSh 300)</option>
                             <option value="Maize Flour 2kg" data-price="200">Maize Flour 2kg (KSh 200)</option>
@@ -248,7 +266,7 @@
                     </div>
                     <div class="col-span-3 space-y-1">
                         <label class="text-[10px] font-bold uppercase text-slate-400">Qty</label>
-                        <input type="number" value="1" min="1" class="qty-input w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg py-1.5 px-3 text-xs outline-none focus:ring-2 focus:ring-primary/20">
+                        <input type="number" value="1" min="1" class="qty-input w-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-lg py-1.5 px-3 text-base outline-none focus:ring-2 focus:ring-primary/20">
                     </div>
                     <div class="col-span-2 text-right pt-6">
                         <p class="text-[10px] font-bold uppercase text-slate-400 mb-1">Total</p>
@@ -373,4 +391,7 @@
         });
 
     })();
+</script>
+</body>
+</html>
 </script>

@@ -1,7 +1,25 @@
-<!-- 
-  Note: This file is intended to be rendered within the main.php layout. 
-  It includes placeholders for sidebar and topbar partials as requested.
--->
+<!DOCTYPE html>
+<html lang="en" id="html-root" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Management - DistroManager</title>
+
+    <!-- Main Tailwind Output -->
+    <link rel="stylesheet" href="../../public/css/app.css">
+
+    <!-- Prevent Flash of Unstyled Theme -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.getElementById('html-root').classList.add('dark');
+                document.getElementById('html-root').classList.remove('light');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <!-- SIDEBAR PARTIAL -->
 <!-- include "../components/sidebar.php" -->
@@ -397,4 +415,7 @@
         });
 
     })();
+</script>
+</body>
+</html>
 </script>

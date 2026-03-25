@@ -1,13 +1,31 @@
-<!-- 
-  Note: This file is intended to be rendered within the main.php layout. 
-  It includes placeholders for sidebar and topbar partials as requested.
--->
+<!DOCTYPE html>
+<html lang="en" id="html-root" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistics & Drivers - DistroManager</title>
+
+    <!-- Main Tailwind Output -->
+    <link rel="stylesheet" href="../../public/css/app.css">
+
+    <!-- Prevent Flash of Unstyled Theme -->
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.getElementById('html-root').classList.add('dark');
+                document.getElementById('html-root').classList.remove('light');
+            }
+        })();
+    </script>
+</head>
+<body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <!-- SIDEBAR PARTIAL -->
 <!-- include "../components/sidebar.php" -->
 
 <!-- MAIN CONTENT WRAPPER -->
-<div class="flex flex-col flex-1 min-width-0 overflow-hidden">
+<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
     
     <!-- TOPBAR PARTIAL -->
     <!-- include "../components/topbar.php" -->
@@ -118,7 +136,7 @@
         <!-- SECTION 3: TODAY'S DISPATCH SCHEDULE -->
         <div class="space-y-4">
             <h2 class="text-lg font-bold" style="color: var(--color-text);">Today's Dispatch Schedule</h2>
-            <div class="bg-[var(--color-surface)] rounded-2xl border border-[var(--color-border)] shadow-sm overflow-hidden">
+            <div class="bg-[var(--color-surface)] dark:bg-slate-800 rounded-2xl border border-[var(--color-border)] dark:border-slate-700 shadow-sm overflow-hidden">
                 <div class="overflow-x-auto">
                     <table class="w-full text-left text-sm">
                         <thead class="bg-slate-50 dark:bg-slate-900/50 text-[10px] font-bold uppercase tracking-wider text-slate-500 border-b border-[var(--color-border)]">
@@ -214,7 +232,7 @@
                             <td class="px-4 py-3 font-semibold">Cooking Oil 5L</td>
                             <td class="px-4 py-3 text-center font-mono">50</td>
                             <td class="px-4 py-3">
-                                <input type="number" value="0" class="recon-returned w-16 mx-auto block bg-white dark:bg-slate-900 border border-[var(--color-border)] rounded px-2 py-1 text-center outline-none focus:ring-2 focus:ring-primary/20">
+                                <input type="number" value="0" class="recon-returned w-16 mx-auto block bg-white dark:bg-slate-900 border border-[var(--color-border)] rounded px-2 py-1 text-center text-base outline-none focus:ring-2 focus:ring-primary/20">
                             </td>
                             <td class="recon-sold px-4 py-3 text-center font-bold text-primary">50</td>
                             <td class="recon-variance px-4 py-3 text-center font-bold">50</td>
@@ -360,3 +378,5 @@
         margin: 0; 
     }
 </style>
+</body>
+</html>

@@ -1,9 +1,9 @@
-<header id="topbar" class="h-14 sticky top-0 z-30 flex items-center justify-between px-6 transition-all duration-300 ease-in-out border-b md:ml-64" style="background-color: var(--color-surface); border-color: var(--color-border);">
+<header id="topbar" class="h-14 sticky top-0 z-30 flex items-center justify-between px-6 transition-all duration-300 ease-in-out border-b dark:bg-slate-800 dark:border-slate-700" style="background-color: var(--color-surface); border-color: var(--color-border);">
     
     <!-- Left Section: Mobile Toggle & Page Info -->
     <div class="flex items-center gap-4">
-        <!-- Mobile Sidebar Toggle (Visible < 768px) -->
-        <button id="mobile-sidebar-toggle" class="md:hidden p-2 -ml-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" aria-label="Open Menu">
+        <!-- Mobile Sidebar Toggle (Visible < 1024px) -->
+        <button id="mobile-sidebar-toggle" class="lg:hidden p-2 -ml-2 text-slate-500 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg transition-colors" aria-label="Open Menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
@@ -28,7 +28,7 @@
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
             </div>
             <input type="text" placeholder="Search..." 
-                class="w-10 md:w-48 focus:w-64 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-full py-1.5 pl-10 pr-4 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 placeholder:opacity-0 md:placeholder:opacity-100 focus:placeholder:opacity-100">
+                class="w-10 md:w-48 focus:w-64 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-full py-1.5 pl-10 pr-4 text-base focus:outline-none focus:ring-2 focus:ring-primary/20 transition-all duration-300 placeholder:opacity-0 md:placeholder:opacity-100 focus:placeholder:opacity-100">
         </div>
 
         <!-- Notification Bell -->

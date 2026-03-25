@@ -1,7 +1,7 @@
 <!-- Sidebar Overlay (Mobile Only) -->
-<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
+<div id="sidebar-overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
 
-<nav id="sidebar" class="group fixed left-0 top-0 h-screen z-40 w-64 -translate-x-full md:translate-x-0 transition-all duration-300 ease-in-out flex flex-col text-slate-200 border-r border-white/5" style="background-color: var(--color-sidebar);">
+<nav id="sidebar" class="group fixed left-0 top-0 h-screen z-40 w-64 -translate-x-full lg:translate-x-0 transition-all duration-300 ease-in-out flex flex-col text-slate-200 border-r border-white/5" style="background-color: var(--color-sidebar);">
     
     <!-- Top Section: Logo & Toggle -->
     <div class="flex items-center justify-between p-4 mb-4">
