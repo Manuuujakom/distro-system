@@ -1,10 +1,10 @@
 :root {
-  --color-bg: #FFFFFF;
-  --color-surface: #F8FAFC;
-  --color-sidebar: #1E293B;
-  --color-text: #1E293B;
+  --color-bg: #F1F5F9; /* Softer off-white background */
+  --color-surface: #FFFFFF; /* Pure white for cards to pop */
+  --color-sidebar: #1E40AF; /* Primary blue for light mode sidebar */
+  --color-text: #1E293B; 
   --color-text-muted: #64748B;
-  --color-border: #E2E8F0;
+  --color-border: #E2E8F0; /* Reverted to a slightly darker border for better separation */
   --color-primary: #1E40AF;
   --color-accent: #F59E0B;
   --color-danger: #EF4444;

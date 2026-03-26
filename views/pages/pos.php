@@ -21,10 +21,11 @@
 </head>
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
-<!-- SIDEBAR PARTIAL (Hidden on mobile by default in main layout) -->
-<!-- include "../components/sidebar.php" -->
+<?php include "../components/sidebar.php"; ?>
 
-<div class="flex flex-col h-full lg:flex-row bg-[var(--color-bg)] transition-colors duration-300 relative overflow-hidden">
+<div id="main-content-wrapper" class="lg:ml-64 flex flex-col h-full transition-all duration-300 relative overflow-hidden">
+    
+    <?php include "../components/topbar.php"; ?>
     
     <!-- MOBILE POS HEADER (Replaces standard topbar on mobile) -->
     <header class="lg:hidden flex items-center justify-between h-[48px] px-4 bg-primary text-white shrink-0 sticky top-0 z-50 shadow-sm">

@@ -21,14 +21,11 @@
 </head>
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
-<!-- SIDEBAR PARTIAL -->
-<!-- include "../components/sidebar.php" -->
+<?php include "../components/sidebar.php"; ?>
 
 <!-- MAIN CONTENT WRAPPER -->
 <div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    
-    <!-- TOPBAR PARTIAL -->
-    <!-- include "../components/topbar.php" -->
+    <?php include "../components/topbar.php"; ?>
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-6">
@@ -106,7 +103,7 @@
         </div>
 
         <!-- SALES TABLE -->
-        <div class="bg-[var(--color-surface)] dark:bg-slate-800 rounded-xl border border-[var(--color-border)] dark:border-slate-700 shadow-sm overflow-hidden">
+        <div class="bg-[var(--color-surface)] dark:bg-slate-800 rounded-2xl border border-slate-200/60 dark:border-slate-700 shadow-md overflow-hidden">
             <div class="overflow-x-auto">
                 <table class="w-full text-left border-collapse">
                     <thead class="bg-slate-50 dark:bg-slate-900/50 text-[10px] font-bold uppercase tracking-wider text-slate-500 border-b border-[var(--color-border)]">

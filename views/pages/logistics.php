@@ -21,14 +21,11 @@
 </head>
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
-<!-- SIDEBAR PARTIAL -->
-<!-- include "../components/sidebar.php" -->
+<?php include "../components/sidebar.php"; ?>
 
 <!-- MAIN CONTENT WRAPPER -->
 <div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    
-    <!-- TOPBAR PARTIAL -->
-    <!-- include "../components/topbar.php" -->
+    <?php include "../components/topbar.php"; ?>
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-8">

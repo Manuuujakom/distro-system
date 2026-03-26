@@ -21,14 +21,11 @@
 </head>
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
-<!-- SIDEBAR PARTIAL -->
-<!-- include "../components/sidebar.php" -->
+<?php include "../components/sidebar.php"; ?>
 
 <!-- MAIN CONTENT WRAPPER -->
 <div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    
-    <!-- TOPBAR PARTIAL -->
-    <!-- include "../components/topbar.php" -->
+    <?php include "../components/topbar.php"; ?>
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-6 bg-[var(--color-bg)] min-h-screen dark:bg-slate-900">
@@ -54,7 +51,7 @@
         <!-- SECTION 1: KPI STAT CARDS -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <!-- Total Revenue -->
-            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-[var(--color-border)] shadow-sm group hover:border-primary/30 transition-all">
+            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-slate-200/60 border-t-4 border-t-green-500 shadow-md group hover:shadow-lg transition-all">
                 <div class="flex justify-between items-start">
                     <div class="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center text-green-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
@@ -66,7 +63,7 @@
             </div>
 
             <!-- Active Drivers -->
-            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-[var(--color-border)] shadow-sm group hover:border-primary/30 transition-all">
+            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-slate-200/60 border-t-4 border-t-blue-500 shadow-md group hover:shadow-lg transition-all">
                 <div class="flex justify-between items-start">
                     <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
@@ -78,7 +75,7 @@
             </div>
 
             <!-- Stock Dispatched -->
-            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-[var(--color-border)] shadow-sm group hover:border-primary/30 transition-all">
+            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-slate-200/60 border-t-4 border-t-orange-500 shadow-md group hover:shadow-lg transition-all">
                 <div class="flex justify-between items-start">
                     <div class="w-10 h-10 rounded-full bg-orange-100 dark:bg-orange-900/30 flex items-center justify-center text-orange-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
@@ -90,7 +87,7 @@
             </div>
 
             <!-- Pending Reconciliations -->
-            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-[var(--color-border)] shadow-sm group hover:border-primary/30 transition-all">
+            <div class="bg-[var(--color-surface)] p-5 rounded-xl border border-slate-200/60 border-t-4 border-t-red-500 shadow-md group hover:shadow-lg transition-all">
                 <div class="flex justify-between items-start">
                     <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center text-red-600">
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -105,7 +102,7 @@
         <!-- SECTION 2: SALES OVERVIEW & TOP PRODUCTS -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <!-- Sales Overview Chart (2/3) -->
-            <div class="lg:col-span-2 bg-[var(--color-surface)] dark:bg-slate-800 rounded-xl border border-[var(--color-border)] dark:border-slate-700 p-5 shadow-sm flex flex-col">
+            <div class="lg:col-span-2 bg-[var(--color-surface)] dark:bg-slate-800 rounded-2xl border border-slate-200/60 dark:border-slate-700 p-6 shadow-md flex flex-col">
                 <div class="flex items-center justify-between mb-8">
                     <h3 class="font-bold text-slate-700 dark:text-slate-200">Sales Overview</h3>
                     <div class="flex p-1 bg-slate-100 dark:bg-slate-800 rounded-lg">
