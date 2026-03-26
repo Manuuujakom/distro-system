@@ -28,7 +28,7 @@
     <?php include "../components/topbar.php"; ?>
 
     <!-- PAGE CONTENT AREA -->
-    <main class="flex-1 overflow-y-auto p-6 space-y-8">
+    <main class="flex-1 overflow-y-auto p-6 pt-32 space-y-8">
         
         <!-- PAGE HEADER -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">

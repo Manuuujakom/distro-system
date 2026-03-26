@@ -22,10 +22,10 @@
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <?php include "../components/sidebar.php"; ?>
-
+<?php include "../components/topbar.php"; ?>
 <!-- MAIN CONTENT WRAPPER -->
-<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    <?php include "../components/topbar.php"; ?>
+<div id="main-content-wrapper" class="lg:ml-64 pt-14 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
+    
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-6">
@@ -52,7 +52,7 @@
         </div>
 
         <!-- TABS BAR -->
-        <div class="border-b border-[var(--color-border)]">
+        <div class="sticky top-14 z-20 -mx-6 px-6 bg-[var(--color-bg)] border-b border-[var(--color-border)] transition-all duration-300">
             <nav class="flex flex-wrap gap-8 text-sm font-bold" id="accounting-tabs">
                 <button data-target="cashbook" class="tab-btn py-4 border-b-2 border-primary text-primary transition-all">Cash Book</button>
                 <button data-target="expenses" class="tab-btn py-4 border-b-2 border-transparent text-slate-500 hover:text-slate-700 dark:hover:text-slate-300 transition-all">Expenses</button>

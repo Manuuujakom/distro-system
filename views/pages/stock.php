@@ -21,9 +21,12 @@
 </head>
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
+<?php include "../components/sidebar.php"; ?>
+<?php include "../components/topbar.php"; ?>
 <!-- MAIN CONTENT WRAPPER -->
-<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    <?php include "../col
+<div id="main-content-wrapper" class="lg:ml-64 pt-14 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
+    
+    <main class="flex-1 overflow-y-auto p-6 space-y-8">
         <!-- PAGE HEADER -->
         <div class="flex flex-col md:flex-row md:items-center justify-between gap-4">
             <div>
@@ -252,7 +255,6 @@
             </div>
         </div>
     </main>
-</div>
 
 <!-- DISPATCH STOCK DRAWER -->
 <div id="drawer-overlay-dispatch" class="fixed inset-0 bg-black/40 z-[60] hidden backdrop-blur-sm transition-opacity"></div>
@@ -409,4 +411,3 @@
 </script>
 </body>
 </html>
-</script>

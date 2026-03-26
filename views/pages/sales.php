@@ -22,10 +22,10 @@
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <?php include "../components/sidebar.php"; ?>
-
+<?php include "../components/topbar.php"; ?>
 <!-- MAIN CONTENT WRAPPER -->
-<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    <?php include "../components/topbar.php"; ?>
+<div id="main-content-wrapper" class="lg:ml-64 pt-14 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
+    
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-6">
@@ -70,7 +70,7 @@
         </div>
 
         <!-- FILTER BAR -->
-        <div class="sticky top-0 z-20 -mx-6 px-6 py-3 border-y flex flex-wrap items-center gap-4 transition-colors" style="background-color: var(--color-surface); border-color: var(--color-border);">
+        <div class="sticky top-14 lg:top-14 z-20 -mx-6 px-6 py-3 border-y flex flex-wrap items-center gap-4 transition-all duration-300" style="background-color: var(--color-surface); border-color: var(--color-border);">
             <div class="flex items-center gap-2">
                 <input type="date" class="bg-white dark:bg-slate-900 border border-[var(--color-border)] rounded-lg px-3 py-1.5 text-xs outline-none focus:ring-2 focus:ring-primary/20">
                 <span class="text-slate-400">→</span>

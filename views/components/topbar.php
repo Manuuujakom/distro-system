@@ -1,4 +1,4 @@
-<header id="topbar" class="h-14 sticky top-0 z-30 flex items-center justify-between px-6 transition-all duration-300 ease-in-out shadow-lg z-40 bg-primary dark:bg-slate-900">
+<header id="topbar" class="h-14 fixed top-0 left-0 right-0 lg:left-64 z-40 flex items-center justify-between px-6 transition-all duration-300 ease-in-out shadow-lg bg-primary dark:bg-slate-900">
     
     <!-- Left Section: Mobile Toggle & Page Info -->
     <div class="flex items-center gap-4">
@@ -75,3 +75,33 @@
         </div>
     </div>
 </header>
+
+<script>
+    (function() {
+        const topbar = document.getElementById('topbar');
+        const mainContent = document.querySelector('main');
+        let lastScrollTop = 0;
+
+        if (!topbar || !mainContent) return;
+
+        // Detect scroll on the main scrollable container
+        mainContent.addEventListener('scroll', () => {
+            let scrollTop = mainContent.scrollTop;
+            
+            if (scrollTop > 100) { // Only start hiding after initial scroll
+                if (scrollTop > lastScrollTop) {
+                    // Scrolling Down - Hide Header
+                    topbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling Up - Show Header
+                    topbar.style.transform = 'translateY(0)';
+                }
+            } else {
+                // At the top
+                topbar.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
+        }, { passive: true });
+    })();
+</script>

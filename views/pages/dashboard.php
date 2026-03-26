@@ -22,10 +22,10 @@
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <?php include "../components/sidebar.php"; ?>
-
+<?php include "../components/topbar.php"; ?>
 <!-- MAIN CONTENT WRAPPER -->
-<div id="main-content-wrapper" class="lg:ml-64 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
-    <?php include "../components/topbar.php"; ?>
+<div id="main-content-wrapper" class="lg:ml-64 pt-14 flex flex-col flex-1 min-width-0 overflow-hidden transition-all duration-300">
+    
 
     <!-- PAGE CONTENT AREA -->
     <main class="flex-1 overflow-y-auto p-6 space-y-6 bg-[var(--color-bg)] min-h-screen dark:bg-slate-900">

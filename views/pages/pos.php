@@ -22,10 +22,9 @@
 <body class="bg-[var(--color-bg)] text-[var(--color-text)] font-sans">
 
 <?php include "../components/sidebar.php"; ?>
-
-<div id="main-content-wrapper" class="lg:ml-64 flex flex-col h-full transition-all duration-300 relative overflow-hidden">
-    
-    <?php include "../components/topbar.php"; ?>
+<?php include "../components/topbar.php"; ?>
+<!-- MAIN CONTENT WRAPPER -->
+<div id="main-content-wrapper" class="lg:ml-64 pt-14 flex flex-col h-full transition-all duration-300 relative overflow-hidden">
     
     <!-- MOBILE POS HEADER (Replaces standard topbar on mobile) -->
     <header class="lg:hidden flex items-center justify-between h-[48px] px-4 bg-primary text-white shrink-0 sticky top-0 z-50 shadow-sm">
@@ -40,7 +39,7 @@
     </header>
 
     <!-- LEFT / TOP PANE: Entry Form -->
-    <div class="flex-1 overflow-y-auto p-4 lg:p-6 lg:w-[55%] pb-32 lg:pb-6">
+    <div class="flex-1 overflow-y-auto p-4 pt-6 lg:p-6 lg:pt-0 lg:w-[55%] pb-32 lg:pb-6">
         
         <!-- CUSTOMER SECTION -->
         <section class="bg-[var(--color-surface)] rounded-2xl p-4 mb-4 border border-[var(--color-border)] shadow-sm">
